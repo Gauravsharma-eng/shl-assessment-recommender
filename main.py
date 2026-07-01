@@ -168,9 +168,9 @@ def parse_gemini_response(response_text: str) -> dict:
 
 
 
-@app.get("/health")
-async def health_check():
-    return {"status": "ok", "service": "SHL Assessment Recommender"}
+@app.get("/")
+async def home():
+    return {"message": "Welcome to SHL Assessment Recommender API! Use /health or /chat endpoints."}
 
 
 @app.post("/chat", response_model=ChatResponse)
